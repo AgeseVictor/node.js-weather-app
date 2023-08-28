@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto funds | <%= title %></title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"> -->
+  </head>
+  
+  <body>
+    <% const name = 'classic' %>
+    
+    <div class="wrapper">
+        <nav>
+            <div class="logo">blackChain</div>
+            <div class="nav1">
+                <ul>
+                    <li>Features</li>
+                    <li><a href="/about">About US</a></li>
+                    <li>Career</li>
+                    <li>Buy Crypto</li>
+                </ul>
+            </div>
+            <div class="connect">
+                connect wallet
+            </div>
+        </nav>
+
+        <div class="blog content">
+            <h2>all blogs</h2>
+            <% if (blogs.length > 0) { %>
+                <% blogs.map(blog => { %>
+                    <h1><%= blog.title %></h1>
+                    <h1><%= blog.snippet %></h1>
+                <% }) %>
+            <% } else { %>
+                    <!-- <%  %> -->
+                    <p>there are no blog to display...</p>
+                <% } %>
+        </div>
+    </div>
+  </body>
+</html>
